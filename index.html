@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es_MX">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FarmaLike</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body id="body" class="menu_close">
+    <div class="overlay"></div>
+    <header class="header">
+        <div class="navbar_container">
+            <div class="header__logo">
+                <img src="" alt="">
+            </div>
+            <div id="hamburgerButton" class="hamburger__box">
+                <div class="hamburger__inner">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <nav class="navbar">
+                <ul class="navbar__menu">
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="">Link 1</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="">Link 2</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a class="navbar__link" href="">Link 3</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <nav id="menu_movil" class="navbar__movil">
+            <ul class="navbar__menu">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="">Link 1</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="">Link 2</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="">Link 3</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        const buttonHamburger = document.querySelector('#hamburgerButton');
+        const body = document.querySelector('#body');
+        buttonHamburger.addEventListener('click', () => {
+            body.classList.toggle('menu_close');
+            body.classList.toggle('menu_open');
+        });
+    </script>
+</body>
+
+</html>
