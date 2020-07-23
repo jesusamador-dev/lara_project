@@ -75,3 +75,114 @@ body {
 .hamburger__inner span:nth-child(3) {
     margin-top: 5px;
 }
+
+@media only screen and (min-width: 800px) {
+    .hamburger__box {
+        display: none;
+    }
+    .navbar__movil {
+        display: none;
+    }
+    .navbar {
+        display: block;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/*
+    Banner principal
+*/
+
+.banner {
+    width: 100%;
+    min-height: 400px;
+    height: 60vh;
+    background-image: url('https://images.unsplash.com/photo-1439923274069-a6f070db0c99?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1485&q=80');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/* Seccion de Quiénes Somos */
+
+.container {
+    display: grid;
+    max-width: 1300px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.quienes_somos {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.quienes_somos__content {
+    line-height: 1.4rem;
+}
+
+
+/* Articulos */
+
+.articulos {
+    grid-template-columns: 1fr;
+    margin-top: 1.5rem;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.articulos__item {
+    background-color: #ffffff!important;
+}
+
+@media only screen and (min-width: 768px) {
+    .quienes_somos__image {
+        display: flex;
+        justify-content: center;
+    }
+    .quienes_somos__image img {
+        max-width: 70%;
+    }
+    .articulos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .articulos__title {
+        grid-column: 1 / -1;
+    }
+    .articulos__item:nth-child(2) {
+        grid-column: 1 / 3;
+    }
+    .articulos__item:nth-child(3) {
+        grid-column: 3 / -1;
+    }
+    .articulos__item:nth-child(4) {
+        grid-column: 2 / 4;
+    }
+}
+
+@media only screen and (min-width: 1020px) {
+    .quienes_somos {
+        grid-template-columns: 1fr 1fr;
+    }
+    .quienes_somos__image img {
+        max-width: 100%;
+    }
+    .articulos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .articulos__item:nth-child(2) {
+        grid-column: 1 / 2;
+    }
+    .articulos__item:nth-child(3) {
+        grid-column: 2 / 3;
+    }
+    .articulos__item:nth-child(4) {
+        grid-column: 3 / 4;
+    }
+}
